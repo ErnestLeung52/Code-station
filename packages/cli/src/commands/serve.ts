@@ -2,6 +2,8 @@ import path from 'path';
 import { Command } from 'commander';
 import { serve } from 'local-api';
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 export const serveCommand = new Command()
 	// [] not require by command
 	.command('serve [filename]')
@@ -13,17 +15,24 @@ export const serveCommand = new Command()
 			// cwd return where the user is typing the command from, dirname return the folder it in
 			const dir = path.join(process.cwd(), path.dirname(filename));
 			// basename gives the file name
-			const fileName = path.basename(filename);
+			// const fileName = path.basename(filename);
+
 			// Sending options info from CLI to local-api
-			await serve(parseInt(options.port), fileName, dir);
-			console.log(
-				`Opened ${fileName}. Navigate to http://localhost:${options.port} to edit the file.`
+			await serve(
+				parseInt(options.port),
+				path.basename(filename),
+				dir,
+				!isProduction
 			);
-		} catch (error: any) {
-			if (error.code === 'EADDRINUSE') {
+
+			console.log(
+				`Opened ${filename}. Navigate to http://localhost:${options.port} to edit the file.`
+			);
+		} catch (err: any) {
+			if (err.code === 'EADDRINUSE') {
 				console.error('PORT is in use. Trying running on a different port.');
 			} else {
-				console.log('Here is the problem', error.message);
+				console.log('Here is the problem', err.message);
 			}
 			process.exit(1);
 		}

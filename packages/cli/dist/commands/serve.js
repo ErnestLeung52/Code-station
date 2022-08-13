@@ -16,6 +16,7 @@ exports.serveCommand = void 0;
 const path_1 = __importDefault(require("path"));
 const commander_1 = require("commander");
 const local_api_1 = require("local-api");
+const isProduction = process.env.NODE_ENV === 'production';
 exports.serveCommand = new commander_1.Command()
     // [] not require by command
     .command('serve [filename]')
@@ -27,17 +28,17 @@ exports.serveCommand = new commander_1.Command()
         // cwd return where the user is typing the command from, dirname return the folder it in
         const dir = path_1.default.join(process.cwd(), path_1.default.dirname(filename));
         // basename gives the file name
-        const fileName = path_1.default.basename(filename);
+        // const fileName = path.basename(filename);
         // Sending options info from CLI to local-api
-        yield (0, local_api_1.serve)(parseInt(options.port), fileName, dir);
-        console.log(`Opened ${fileName}. Navigate to http://localhost:${options.port} to edit the file.`);
+        yield (0, local_api_1.serve)(parseInt(options.port), path_1.default.basename(filename), dir, !isProduction);
+        console.log(`Opened ${filename}. Navigate to http://localhost:${options.port} to edit the file.`);
     }
-    catch (error) {
-        if (error.code === 'EADDRINUSE') {
+    catch (err) {
+        if (err.code === 'EADDRINUSE') {
             console.error('PORT is in use. Trying running on a different port.');
         }
         else {
-            console.log('Here is the problem', error.message);
+            console.log('Here is the problem', err.message);
         }
         process.exit(1);
     }
