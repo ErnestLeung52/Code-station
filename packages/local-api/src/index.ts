@@ -11,6 +11,9 @@ export const serve = (
 ) => {
 	const app = express();
 
+	// When requests come in, it first try to match it inside router, then follow through to middleware
+	app.use(createCellsRouter(filename, dir));
+
 	if (useProxy) {
 		app.use(
 			createProxyMiddleware('', {
@@ -27,7 +30,6 @@ export const serve = (
 		app.use(express.static(path.dirname(packagePath)));
 	}
 
-	app.use(createCellsRouter(filename, dir));
 
 	// Solve the problem with try/catch in serve.ts by creating a new promise
 	return new Promise<void>((resolve, reject) => {
