@@ -23,7 +23,7 @@ const serve = (port, filename, dir, useProxy) => {
     }
     else {
         // Serve up all files from this directory
-        const packagePath = require.resolve('local-client/build/index.html');
+        const packagePath = require.resolve('@code-station/local-client/build/index.html');
         app.use(express_1.default.static(path_1.default.dirname(packagePath)));
     }
     // Solve the problem with try/catch in serve.ts by creating a new promise
