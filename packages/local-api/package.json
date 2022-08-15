@@ -1,6 +1,6 @@
 {
 	"name": "@code-station/local-api",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "",
 	"main": "dist/index.js",
 	"types": "dist/index.js",
@@ -23,7 +23,7 @@
 		"typescript": "^4.7.4"
 	},
 	"dependencies": {
-		"@code-station/local-client": "^1.0.0",
+		"@code-station/local-client": "^1.0.1",
 		"cors": "^2.8.5",
 		"express": "^4.18.1",
 		"http-proxy-middleware": "^2.0.6"
