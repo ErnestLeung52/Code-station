@@ -21,7 +21,6 @@ export const fetchPlugin = (inputCode: string) => {
 			});
 
 			build.onLoad({ filter: /.*/ }, async (args: any) => {
-				console.log('I ran but nothing will happen');
 				// Check to see if we have already fetched this file and if it is in the cache
 				const cachedResult =
 					await fileCache.getItem<esbuild.OnLoadResult>(args.path);

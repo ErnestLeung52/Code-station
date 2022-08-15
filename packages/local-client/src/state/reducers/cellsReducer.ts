@@ -2,6 +2,7 @@ import produce from 'immer';
 import { ActionType } from '../action-types';
 import { Action } from '../actions';
 import { Cell } from '../cell';
+import { defaultText, defaultCode1, defaultCode2 } from './defaultCode';
 
 interface CellsState {
 	loading: boolean;
@@ -15,8 +16,24 @@ interface CellsState {
 const initialState: CellsState = {
 	loading: false,
 	error: null,
-	order: [],
-	data: {},
+	order: ['AAAA', 'BBBB', 'CCCC'],
+	data: {
+		AAAA: {
+			id: 'AAAA',
+			type: 'text',
+			content: defaultText,
+		},
+		BBBB: {
+			id: 'BBBB',
+			type: 'code',
+			content: defaultCode1,
+		},
+		CCCC: {
+			id: 'CCCC',
+			type: 'code',
+			content: defaultCode2,
+		},
+	},
 };
 
 const reducer = produce(

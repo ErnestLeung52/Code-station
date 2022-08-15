@@ -10,11 +10,19 @@ export const store = createStore(
 	applyMiddleware(persistMiddleware, thunk)
 );
 
-// Manual Testing for state
+// Hard Coded Default Page
 // store.dispatch({
 // 	type: ActionType.INSERT_CELL_AFTER,
 // 	payload: {
 // 		id: null,
 // 		type: 'code',
+// 	},
+// });
+
+// store.dispatch({
+// 	type: ActionType.INSERT_CELL_AFTER,
+// 	payload: {
+// 		id: null,
+// 		type: 'text',
 // 	},
 // });
