@@ -1,0 +1,1 @@
+lerna add esbuild@0.8.26 --exact --dev --scope=code-station
