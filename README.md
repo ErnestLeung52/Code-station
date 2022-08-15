@@ -1,6 +1,15 @@
-📝 Code-Station
--
+## 📝 Code-Station
+
+Brief
 A lightweight, efficient, and interactive coding environment. You can write JavaScript, see it, execute it, and write comprehensive documentation using markdown.
+
+Thank you for using Code-Station!
+
+- Ernest Leung
+  ernestleung52@gmail.com
+  https://www.linkedin.com/in/ernestleung52/
+
+Feature
 
 - Click any text cell (including this one) to edit it
 - The code in each code editor is all joined together into one file. If you define a variable in cell #1, you can refer to it in any following cells
@@ -8,17 +17,20 @@ A lightweight, efficient, and interactive coding environment. You can write Java
 - Re-order or delete cells using the buttons on the top right
 - Add new cells by hovering on the divider between each cell
 
+Installation
 All of your changes get saved to the file you opened Code-Station with. You can run `npx code-station serve test.js`, all of the text and code you write will be saved to the `test.js` file automatically.
 
-Thank you for using Code-Station! 
-
--Ernest
-
-lerna add "package name" --scope="directory"
 npx code-station serve "file name" -p "port number"
 
+Development
+lerna add "package name" --scope="directory"
 Start up Proxy server
 
 CLI:
 npm run prepublishOnly
-Using ESBuild to bundle entire CLI 
+Using ESBuild to bundle entire CLI
+
+Iteration Opportunities
+
+1. More user-friendly output
+2. Frontend improvement (fixed code editor height)
