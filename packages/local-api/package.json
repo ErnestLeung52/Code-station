@@ -1,6 +1,6 @@
 {
 	"name": "@code-station/local-api",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "",
 	"main": "dist/index.js",
 	"types": "dist/index.js",
