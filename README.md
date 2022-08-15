@@ -33,7 +33,7 @@ Using ESBuild to bundle entire CLI
 
 Publishing to NPM
 npm login
-npm publish
+npm publish --no-push
 
 Iteration Opportunities
 
