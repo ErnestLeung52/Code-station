@@ -27,8 +27,13 @@ lerna add "package name" --scope="directory"
 Start up Proxy server
 
 CLI:
+relink: lerna bootstrap
 npm run prepublishOnly
 Using ESBuild to bundle entire CLI
+
+Publishing to NPM
+npm login
+npm publish
 
 Iteration Opportunities
 
