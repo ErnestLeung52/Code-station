@@ -1,6 +1,6 @@
 {
 	"name": "code-station",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "",
 	"bin": "dist/index.js",
 	"publishConfig": {
@@ -17,10 +17,10 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"@code-station/local-client": "^1.0.1"
+		"@code-station/local-client": "^1.0.3"
 	},
 	"devDependencies": {
-		"@code-station/local-api": "^1.0.2",
+		"@code-station/local-api": "^1.0.3",
 		"@types/node": "^18.7.2",
 		"commander": "^9.4.0",
 		"esbuild": "0.8.26",
