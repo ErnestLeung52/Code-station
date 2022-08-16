@@ -1,5 +1,8 @@
 ## 📝 Code-Station
 
+<!-- ![CodeStation Logo](/packages/local-client/public/logo192.png "logo") -->
+<img src="/packages/local-client/public/logo192.png" width=50% height=50%>
+
 ### Brief
 A lightweight, efficient, and interactive coding environment. You can write JavaScript, see it, execute it, write comprehensive documentation using markdown, and share it with others.
 
