@@ -1,5 +1,7 @@
 ## 📝 Code-Station
 
+![CodeStation Logo](/packages/local-client/public/logo192.png "logo")
+
 ### Brief
 A lightweight, efficient, and interactive coding environment. You can write JavaScript, see it, execute it, write comprehensive documentation using markdown, and share it with others.
 
