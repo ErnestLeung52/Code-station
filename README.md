@@ -43,6 +43,6 @@ Run below code in root directory to publish to npm <br>
 1. More user-friendly output
 2. Frontend improvement (fixed code editor height)
 3. React syntax color highlighter
-
+---
 Thank you for using Code-Station!
-- [Ernest Leung](https://www.linkedin.com/in/ernestleung52/)
+[Ernest Leung](https://www.linkedin.com/in/ernestleung52/)
