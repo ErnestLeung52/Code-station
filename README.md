@@ -33,9 +33,10 @@ Using ESBuild to bundle entire CLI
 
 Publishing to NPM
 npm login
-npm publish --no-push
+lerna publish --no-push
 
 Iteration Opportunities
 
 1. More user-friendly output
 2. Frontend improvement (fixed code editor height)
+3. React syntax color highlighter
