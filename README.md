@@ -22,29 +22,29 @@ A lightweight, efficient, and interactive coding environment. You can write Java
 
 All of your changes get saved to the file you opened Code-Station with. You can run `npx code-station serve test.js`, all of the text and code you write will be saved to the `test.js` file automatically.
 
-`npx code-station serve <file name> -p <port number>`
-ex. `npx code-station serve notebook.js -p 4000`
+`npx code-station serve <file name> -p <port number>` <br>
+ex. `npx code-station serve notebook.js -p 4000` <br>
 _<> optional_
 
 ### Development
 
-- Do not use `npm` to install new packages, use `lerna add` to install the package to a specific directory
-  `lerna add <package>[@version] [--dev] [--exact] [--peer] --scope=[directory]`
+- Do not use `npm` to install new packages, use `lerna add` to install the package to a specific directory <br>
+  `lerna add <package>[@version] [--dev] [--exact] [--peer] --scope=[directory]` <br>
   ex. `lerna add react@18.2.0 --exact --scope=@code-station/local-client`
 
 - Using ESBuild to bundle entire CLI. <br>
-  `cd` to the `cli` directory and run
+  `cd` to the `cli` directory and run <br>
   `npm run prepublishOnly`
 
 - Start up proxy server. <br>
-  `cd` to the `cli` directory and run
+  `cd` to the `cli` directory and run <br>
   `node index.js serve`
 
 - Publishing to NPM <br>
-  Sign in to npm
+  Sign in to npm <br>
   `npm login` <br>
   Run below code in root directory to publish to npm <br>
-  _`cli` folder depends on `local-client`, you need to create an organization on npm to publish three packages"_
+  _`cli` folder depends on `local-client`, you need to create an organization on npm to publish three packages"_ <br>
   `lerna publish --no-push`
 
 - For any additional inquires, feel free to contact me on [LinkedIn](https://www.linkedin.com/in/ernestleung52/)
