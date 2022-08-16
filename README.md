@@ -44,5 +44,5 @@ Run below code in root directory to publish to npm <br>
 2. Frontend improvement (fixed code editor height)
 3. React syntax color highlighter
 ---
-Thank you for using Code-Station!
+Thank you for using Code-Station! <br>
 [Ernest Leung](https://www.linkedin.com/in/ernestleung52/)
