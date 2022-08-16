@@ -1,8 +1,10 @@
 ## 📝 Code-Station
 
 <!-- ![CodeStation Logo](/packages/local-client/public/logo192.png "logo") -->
-<img src="/packages/local-client/public/logo192.png" width=50% height=50% align="center">
-<img src="/packages/local-client/public/ui-screenshot.png" width=70% height=70% align="center">
+<p align="center">
+  <img src="/packages/local-client/public/logo192.png" width=50% height=50% >
+  <img src="/packages/local-client/public/ui-screenshot.png" >
+</p>
 
 ### Brief
 
